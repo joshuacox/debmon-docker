@@ -1,0 +1,25 @@
+{
+  "name": "debmon",
+  "env_run_lists": {},
+  "default_attributes": {
+    "apache": {
+      "user": "www-data",
+      "group": "www-data"
+    },
+    "vm": {
+    "ip": "192.168.44.43",
+    "memory": "1024",
+    "forwarded_ports": []
+    }
+  },
+  "override_attributes": {},
+  "json_class": "Chef::Role",
+  "run_list": [
+    "recipe[apt]",
+    "recipe[apache2]",
+    "recipe[icinga::server]",
+    "recipe[icinga::client]"
+  ],
+  "description": "Installs debmon development environment.",
+  "chef_type": "role"
+}

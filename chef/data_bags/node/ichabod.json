@@ -1,0 +1,65 @@
+{
+  "name":"ichabod",
+  "chef_environment":"_default",
+  "json_class":"Chef::Node",
+  "automatic":{
+    "network":{
+      "interfaces":{
+        "eth0":{
+          "addresses":{
+            "65.67.51.186":{
+              "scope": "Global",
+              "netmask": "255.255.255.248",
+              "broadcast": "65.67.51.190",
+              "prefixlen": "24",
+              "family": "inet"
+            }
+          }
+        },
+        "eth1":{
+          "addresses":{
+            "8.1.1.8":{
+              "scope": "Global",
+              "netmask": "255.255.255.0",
+              "broadcast": "8.1.1.255",
+              "prefixlen": "24",
+              "family": "inet"
+            }
+          }
+        }
+      }
+    },
+    "platform_version":"6.0.5",
+    "domain": "local",
+    "fqdn":"icinga-server-01.local",
+    "ipaddress":"127.0.0.1",
+    "os":"linux",
+    "lsb":{
+      "codename":"squeeze",
+      "id":"Debian",
+      "description":"Debian GNU/Linux 6.0.5 (squeeze)",
+      "release":"6.0.5"
+    },
+    "os_version":"3.2.0-4-686-pae",
+    "platform_family":"debian",
+    "recipes":[
+    ],
+    "hostname":"ichabod"
+  },
+  "normal": {
+    "tags":[
+      "testing-tag-01"
+    ],
+    "id":"ichabod",
+    "roles": [
+      "base",
+      "monitoring-server"
+    ],
+    "platform": "debian"
+  },
+  "chef_type":"node",
+  "run_list":[
+    "role[base]",
+    "role[monitoring-server]"
+  ]
+}
