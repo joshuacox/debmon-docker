@@ -17,8 +17,14 @@
   "run_list": [
     "recipe[apt]",
     "recipe[apache2]",
-    "recipe[icinga::server]",
-    "recipe[icinga::client]"
+    "recipe[icinga2::default]",
+    "recipe[icinga2::repo]",
+    "recipe[icinga2::server]",
+    "recipe[icinga2::server_constants]",
+    "recipe[icinga2::server_objects]",
+    "recipe[icinga2::server_pnp]",
+    "recipe[icinga2::server_ido]",
+    "recipe[icinga2::server_web2]"
   ],
   "description": "Installs debmon development environment.",
   "chef_type": "role"
