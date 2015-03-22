@@ -1,6 +1,9 @@
 source "https://api.berkshelf.com"
 
 cookbook "icinga2", github: "Icinga/chef-icinga2"
+cookbook 'ulimit'
+cookbook 'yum'
+cookbook 'yum-epel'
 cookbook "chef-solo-search", github: "edelight/chef-solo-search"
 cookbook 'rrdcached', :github => 'Bigpoint/rrdcached'
 cookbook 'pnp4nagios', :github => 'Bigpoint/pnp4nagios'
