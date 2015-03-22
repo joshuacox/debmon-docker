@@ -1,4 +1,4 @@
-FROM joshuacox/docker-chef-solo:trusty
+FROM joshuacox/docker-chef-solo:jessie
 MAINTAINER Josh Cox <josh 'at' webhosting coop>
 
 ENV debmon_docker_updated 20140308
